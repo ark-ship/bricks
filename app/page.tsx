@@ -51,9 +51,7 @@ export default function Home() {
       letterSpacing: "-0.045em",
     }}
   >
-    A collectible
-    should be more than something
-    you just hold.
+    404 BRICKS.
   </h3>
 
   <p
