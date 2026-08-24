@@ -417,7 +417,7 @@ export default function BrickCard({
               >
                 {hasEnoughBrick
                   ? "REDEEM BRICK"
-                  : "NEED 6,666 BRICK"}
+                  : "NEED 6,666 $BRICKS"}
               </button>
             )}
           </>
