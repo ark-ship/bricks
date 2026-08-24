@@ -9,7 +9,7 @@ import {
   useSwitchChain,
 } from "wagmi";
 
-import { robinhoodTestnet } from "@/lib/chain";
+import { robinhoodMainnet } from "@/lib/chain";
 
 export default function Header() {
   const [mounted, setMounted] =
@@ -62,8 +62,8 @@ export default function Header() {
   }
 
   const wrongNetwork =
-    isConnected &&
-    chainId !== robinhoodTestnet.id;
+  isConnected &&
+  chainId !== robinhoodMainnet.id;
 
   return (
     <header className="site-header">
@@ -74,11 +74,10 @@ export default function Header() {
           <button
             className="network-button"
             onClick={() =>
-              switchChain({
-                chainId:
-                  robinhoodTestnet.id,
-              })
-            }
+            switchChain({
+            chainId: robinhoodMainnet.id,
+            })
+        }
           >
             SWITCH NETWORK
           </button>

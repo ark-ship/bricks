@@ -119,7 +119,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://opensea.io/collection/YOUR_COLLECTION"
+              href="https://opensea.io/collection/bricks-404"
               target="_blank"
               rel="noreferrer"
             >
@@ -127,15 +127,7 @@ export default function Home() {
             </a>
 
             <a
-              href="YOUR_SWAP_URL"
-              target="_blank"
-              rel="noreferrer"
-            >
-              SWAP $BRICKS
-            </a>
-
-            <a
-              href="https://explorer.testnet.chain.robinhood.com/address/0x1e870ccc6c673a59757fcba302536b871f901833"
+              href="https://robinhoodchain.blockscout.com/token/0x1bb56feE0c37762610E837aFE4deBAedb670b6d4"
               target="_blank"
               rel="noreferrer"
             >

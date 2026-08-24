@@ -1,6 +1,13 @@
 export const CONTRACTS = {
-  bricks404: "0x1e870ccc6c673a59757fcba302536b871f901833",
-  bricksNFT: "0x42cfc86a5f952b8698e4bcd0bb2264c102c4b009",
-  brickToken: "0xae3c138811e9f80dfbedf8e6d3fb7eeda5605784",
-  renderer: "0x8a3adec22893ba8ddb5566ee90dd0fa05e96c15a",
+  bricks404:
+    "0xc3f1f0135e5b4f3037aff60ba55a8b6d5680bbf9",
+
+  brickRenderer:
+    "0xbb7199cb199493dc520cd2b6c7169561a9b6b3ca",
+
+  brickToken:
+    "0x1bb56fee0c37762610e837afe4debaedb670b6d4",
+
+  bricksNFT:
+    "0xa35d93fd9d4e1ab054866acc574cc2e2d7f6b85a",
 } as const;

@@ -1,21 +1,30 @@
 "use client";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
 import {
   WagmiProvider,
   createConfig,
   http,
 } from "wagmi";
+
 import { injected } from "wagmi/connectors";
 
-import { robinhoodTestnet } from "@/lib/chain";
+import { robinhoodMainnet } from "@/lib/chain";
 
 const config = createConfig({
-  chains: [robinhoodTestnet],
+  ssr: true,
+
+  chains: [robinhoodMainnet],
+
   connectors: [injected()],
+
   transports: {
-    [robinhoodTestnet.id]: http(
-      "https://rpc.testnet.chain.robinhood.com"
+    [robinhoodMainnet.id]: http(
+      "https://rpc.mainnet.chain.robinhood.com"
     ),
   },
 });
@@ -29,7 +38,9 @@ export default function Providers({
 }) {
   return (
     <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
+      <QueryClientProvider
+        client={queryClient}
+      >
         {children}
       </QueryClientProvider>
     </WagmiProvider>
