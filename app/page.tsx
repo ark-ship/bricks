@@ -1,69 +1,149 @@
-import Image from "next/image";
+import {
+  ClientHeader,
+  ClientMintCard,
+  ClientMyBricks,
+} from "@/components/ClientOnly";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main>
+      <ClientHeader />
+
+      <div className="page-shell">
+        <section className="hero-grid">
+          <div className="hero-left">
+            <div className="hero-mark">
+              <img
+                src="/logonobg.png"
+                alt="404 Bricks"
+              />
+            </div>
+
+            <div
+  style={{
+    width: "100%",
+    maxWidth: "540px",
+    marginTop: "auto",
+    paddingBottom: "60px",
+  }}
+>
+  <div
+    style={{
+      marginBottom: "18px",
+      color: "#ccff00",
+      fontSize: "15px",
+      fontWeight: 900,
+      letterSpacing: "0.18em",
+    }}
+  >
+    ABOUT
+  </div>
+
+  <h3
+    style={{
+      margin: 0,
+      marginBottom: "28px",
+      maxWidth: "570px",
+      color: "#ffffff",
+      fontSize: "40px",
+      lineHeight: 1.02,
+      fontWeight: 900,
+      letterSpacing: "-0.045em",
+    }}
+  >
+    A collectible
+    should be more than something
+    you just hold.
+  </h3>
+
+  <p
+    style={{
+      margin: 0,
+      marginBottom: "16px",
+      maxWidth: "520px",
+      color: "#8d8d8d",
+      fontSize: "15px",
+      lineHeight: 1.65,
+      fontWeight: 400,
+    }}
+  >
+    404 Bricks is an onchain collectible inspired by the ERC-404 concept, combining NFT ownership with $BRICKS fractionalization.
+  </p>
+
+  <p
+    style={{
+      margin: 0,
+      marginBottom: "24px",
+      maxWidth: "520px",
+      color: "#8d8d8d",
+      fontSize: "15px",
+      lineHeight: 1.65,
+      fontWeight: 400,
+    }}
+  >
+    Hold the full Brick, split it into $BRICKS, trade the pieces, or rebuild the Brick when you have the full amount.
+  </p>
+
+  <div
+    style={{
+      color: "#ccff00",
+      fontSize: "15px",
+      fontWeight: 900,
+      letterSpacing: "0.08em",
+    }}
+  >
+    One Brick. More ways to own it.
+  </div>
+</div>
+          </div>
+
+          <ClientMintCard />
+        </section>
+
+        <ClientMyBricks />
+
+        <footer className="site-footer">
+          <div className="footer-left">
+            <span className="footer-brand">
+              © 404 BRICKS
+            </span>
+          </div>
+
+          <div className="footer-links">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://x.com/404bricks_"
+              target="_blank"
+              rel="noreferrer"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              X
+            </a>
+
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://opensea.io/collection/YOUR_COLLECTION"
+              target="_blank"
+              rel="noreferrer"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+              OPENSEA
+            </a>
+
+            <a
+              href="YOUR_SWAP_URL"
+              target="_blank"
+              rel="noreferrer"
+            >
+              SWAP $BRICKS
+            </a>
+
+            <a
+              href="https://explorer.testnet.chain.robinhood.com/address/0x1e870ccc6c673a59757fcba302536b871f901833"
+              target="_blank"
+              rel="noreferrer"
+            >
+              CONTRACT
+            </a>
+          </div>
+        </footer>
+      </div>
+    </main>
   );
 }
