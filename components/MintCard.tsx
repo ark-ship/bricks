@@ -468,7 +468,7 @@ export default function MintCard() {
           : isSuccess
           ? "MINTED"
           : maxSelectable <= 0
-          ? "SOLD OUT"
+          ? "MAX MINTED"
           : "MINT BRICKS"}
       </button>
 
