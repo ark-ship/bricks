@@ -137,7 +137,7 @@ export default function MintCard() {
         </p>
 
         <div className="mint-price">
-          0.000066 ETH
+      
         </div>
 
         <div
@@ -244,7 +244,7 @@ export default function MintCard() {
       <div className="mint-price">
         {mintPrice
           ? `${formatEther(mintPrice)} ETH`
-          : "0.000066 ETH"}
+          : ""}
       </div>
 
       {/* QUANTITY SELECTOR */}
