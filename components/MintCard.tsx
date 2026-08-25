@@ -106,7 +106,7 @@ export default function MintCard() {
   const mint = () => {
     if (!mounted) return;
     if (!isConnected) return;
-    if (!mintPrice) return;
+    if (mintPrice === undefined) return;
     if (quantity < 1) return;
     if (quantity > maxSelectable) return;
 
@@ -454,7 +454,7 @@ export default function MintCard() {
           !isConnected ||
           isPending ||
           confirming ||
-          !mintPrice ||
+          mintPrice === undefined ||
           maxSelectable <= 0
         }
         onClick={mint}
